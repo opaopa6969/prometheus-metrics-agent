@@ -63,7 +63,9 @@ public class AnnotatedMetricClassTransformer implements ClassFileTransformer {
                 throw e; //useful for testing & fail fast setups
             }
             else {
-                LOGGER.log(WARNING, "Failed to transform " + className, e);
+//              LOGGER.log(WARNING, "Failed to transform " + className, e);
+            	//to suppress error details 
+            	LOGGER.log(WARNING, "Failed to transform " + className + " with error" + e.getMessage());
             }
         }
 
